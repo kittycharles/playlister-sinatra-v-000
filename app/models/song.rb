@@ -3,7 +3,7 @@ class Song < ActiveRecord::Base
   has_many :song_genres
   has_many :genres, :through=> :song_genres
 
-  def slug
+  def self.slug
     self.name.gsub(" ", "-")
   end
 
