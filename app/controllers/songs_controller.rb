@@ -1,6 +1,8 @@
 require 'pry'
 class SongsController < ApplicationController
-
+  enable :sessions
+  use Rack::Flash
+  
   get '/songs' do
     @songs = Song.all
 
